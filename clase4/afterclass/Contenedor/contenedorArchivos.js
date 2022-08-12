@@ -3,7 +3,6 @@ class Contenedor {
     static newId=0;//contenedor de memoria
     constructor(ruta){
         this.ruta=ruta;
-
     }
     async guardar(obj){
         let objs = await this.capturarTodo();
@@ -64,7 +63,6 @@ class Contenedor {
             return `No se pueden borrar los datos`
         }
     } 
-
 }
 
 let alumno = new Contenedor('./alumnos.json')

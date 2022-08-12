@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <form action="/api/productos" method="post">
+      <label>titulo</label>
+      <input type="text" name="title">
+      <label>precio</label>
+      <input type="text" name="price">
+      <label>url</label>
+      <input type="text" name="url">
+      <input type="submit" value="Ingresar Datos">
+    </form>
+  </body>
+</html>
