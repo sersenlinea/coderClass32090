@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <form action="/uploadfile" enctype="multipart/form-data" method="post">
+      <input type="file" name="myFile" id="">
+      <input type="submit" value="Subir archivo">
+    </form>
+    <img width="350px" src="myFile-1660657013742" alt="">
+  </body>
+</html>
