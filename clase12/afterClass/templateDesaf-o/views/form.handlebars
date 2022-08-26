@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Ecommerce</title>
+ 
+
+</head>
+
+<body>
+  <div class="container bg-dark bg-opacity-25">
+    <h2 class="text-primary text-center">Ingrese un nuevo producto</h2>
+    <div class="row d-flex justify-content-center">
+      <form class="w-50" onsubmit="return addProduct(this)">
+        <div class="mb-3">
+          <label class="form-label" for="title">Producto</label>
+          <input class="form-control" type='text'  id="title" required />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="price">Precio</label>
+          <input class="form-control" type='number'  id="price" required />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">URL Imagen</label>
+          <input class="form-control" type='text' id="thumbnail"  />
+        </div>
+        <div class="mb-3">
+          <input class='btn btn-success' type='submit' value="Agregar producto"/>
+        </div>
+      </form>
+    </div>
+   
+    <a href='/productos'>
+      <button>Ver todos los productos</button>
+    </a>
+  </div>
+  <div class="container bg-dark my-5">
+    <h2 class="text-danger text-center">Lista de productos</h2>
+  <div id="products">
+    <table class='table bg-dark table-striped text-white'>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Imagen</th>
+        </tr>
+      </thead>
+      <tbody id="tbdy">
+      </tbody>
+    </table>
+  </div>
+  <div class="row my-5">
+    <h2 class="text-primary text-center">Centro de mensajes</h2>
+  <div>
+    <form onsubmit="return addMessage(this)">
+        <input type="text" id="username" placeholder="Acá tu email">
+        <div id="messages"></div>
+        <input type="text" id="texto" placeholder="Cuéntanos algo...">
+        <input class="btn btn-dark" type="submit" value="Enviar">
+    </form>
+  </div>
+  </div>
+  </div>
+
+  <script src="./main.js"></script>
+  
+</body>
+</html>
